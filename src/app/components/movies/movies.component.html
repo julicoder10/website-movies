@@ -1,0 +1,15 @@
+<section>
+    <div class="box-container">
+        <div class="box" *ngFor="let movie of popular">
+            <div>
+                <img src="https://image.tmdb.org/t/p/original{{movie.poster_path}}">
+
+            </div>
+            <div class="content">
+                <i class="fa-solid fa-play"></i>
+                <h2>{{movie.original_title}}</h2>
+            </div>
+            
+        </div>
+    </div>
+</section>

@@ -1,0 +1,118 @@
+header{
+    display: flex;
+    min-height:4rem;
+    padding: 2rem 4rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    position: fixed;
+    top: 0; right: 0; left: 0;
+    background-color:rgba(0,0,0,0.4);
+
+    nav{
+        display: flex;
+        gap:2rem;
+        align-items: center;
+        &.nav-active{
+            position:absolute;
+            right:0;
+            width:100%;
+            top:7.5rem;
+            background:rgba(0,0,0,0.7);
+            flex-flow: column;
+            align-items: center;
+
+            a{
+                padding:1rem;
+            }
+        }
+
+
+        a{
+            color:#fff;
+            font-size:1.5rem;
+            &:hover{
+                border-bottom:2px solid white;
+            }
+        }
+    }
+
+    #user{
+        display:flex;
+        gap:1rem;
+        align-items: center;
+        i{
+            border:1px solid white;
+            color:white;
+            border-radius:50%;
+            padding:1rem;
+            font-size:1.5rem;
+        }
+    }
+
+    #toggle-bars{
+        font-size:2rem;
+        cursor:pointer;
+        display:none;
+    }
+}
+
+#buscador{
+        position:absolute;
+        top:7rem;
+        width:100%;
+    input{
+        background-color: #fff;
+        padding:1rem 2rem;
+        outline:none;
+        border:1px solid white;
+        color:#000;
+    
+        &.buscadorActivo{
+            display:block;
+        }
+    
+        &.buscadorDesactivado{
+            display:none;
+        }
+    }
+}
+
+
+
+
+@media (max-width:991px){
+    
+
+    header{
+        nav{
+            position:absolute;
+                right:-100%;
+                width:100%;
+                top:7.5rem;
+                background:rgba(0,0,0,0.7);
+                flex-flow: column;
+                align-items: center;
+    
+                a{
+                    padding:1rem;
+                }
+            &.nav-active{
+                position:absolute;
+                right:0;
+                width:100%;
+                top:7.5rem;
+                background:rgba(0,0,0,0.7);
+                flex-flow: column;
+                align-items: center;
+    
+                a{
+                    padding:1rem;
+                }
+            }
+        }
+        #toggle-bars{
+            display:block;
+        }
+    }
+}

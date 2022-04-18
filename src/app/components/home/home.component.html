@@ -1,0 +1,15 @@
+<section id="main">
+    <img src="{{imagen.imgSrc}}" class="background-poster">
+    <div>
+        <h1>Trending</h1>   
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo ad velit doloremque ipsa inventore dicta odio fuga sed assumenda mollitia!</p>
+        <a href="#"> <i class="fa-solid fa-eye"></i> See More</a>
+    </div>
+</section>
+
+<section id="genres" *ngFor="let genre of genres">
+        <div class="box" >
+            <h3>{{genre.name}}</h3>
+        </div>
+</section>
+

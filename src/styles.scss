@@ -1,1 +1,61 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0; padding:0;
+    text-decoration: none;
+    transition:.3s all ease-out;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+html{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    text-transform: capitalize;
+    font-size:62.5%;
+}
+
+html::-webkit-scrollbar{
+    width:.8rem;
+}
+
+html::-webkit-scrollbar-track{
+    background:transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+    background-color:blue;
+    border-color:blue;
+    border:2px solid blue;
+}
+
+body{
+    background-color: #000;
+    color:#fff;
+    overflow-x: hidden;
+}
+
+
+.background-poster{
+    width:100vw;
+    height:100vh;
+    object-fit: cover;
+    position: absolute;
+    z-index:-1;
+    filter: brightness(60%);
+}
+
+
+
+
+
+// MEDIA QUERIES
+
+
+@media (max-width:450px){
+    html{
+        font-size:55%;
+    }
+}
