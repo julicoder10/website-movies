@@ -1,0 +1,16 @@
+<div class="search">
+    <input type="search" placeholder="Search something..." [(ngModel)] = "search">
+    <a (click)="searchMovie(search)"> Search</a>
+</div>
+
+
+<section>
+    <div class="box-container">
+        
+        <div class="box" *ngFor="let movie of movies; let i = index"  routerLink="/play" >
+            <img src="https://image.tmdb.org/t/p/original{{movie.poster_path}}">
+            <h3>{{movie.original_title}}</h3>
+            <h4>popularity : {{movie.popularity}}</h4>
+        </div>
+    </div>
+</section>

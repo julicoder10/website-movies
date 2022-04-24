@@ -1,12 +1,11 @@
 <header>
     <h1>Movies Website</h1>
 
-    <nav [ngClass]="navActivado == true ? 'nav-active' : '' ">
+    <nav [ngClass] = "navActivado == true ? 'nav-active' : '' ">
         <a href="#">Home</a>
-        <a href="#" (click)="activarBuscador()"><i class="fa-solid fa-search"></i> Search</a>
+        <a href="#" routerLink="/search"><i class="fa-solid fa-search"></i> Search</a>
         <a href="#" routerLink="/movies">Movies</a>
-        <a href="#">Series</a>
-        <a href="#">Trending</a>
+        <a href="#">Github</a>
     </nav>
 
     <div id="user">
@@ -16,7 +15,4 @@
     <i class="fa-solid fa-bars" id="toggle-bars" (click)="activarNav()" [ngClass]="navActivado == true ? 'fa-solid fa-xmark' : '' " ></i>
     
 </header>
-<span id="buscador">
-    <input type="search" placeholder="Search a title" [ngClass]="buscadorActivado == true ? 'buscadorActivo'  : 'buscadorDesactivado' ">
-</span>
 

@@ -7,8 +7,8 @@
     </div>
 </section>
 
-<section id="genres" *ngFor="let genre of genres">
-        <div class="box" >
+<section id="genres">
+        <div class="box" *ngFor="let genre of genres">
             <h3>{{genre.name}}</h3>
         </div>
 </section>

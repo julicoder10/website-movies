@@ -1,15 +1,14 @@
 <section>
-    <div class="box-container">
-        <div class="box" *ngFor="let movie of popular">
-            <div>
-                <img src="https://image.tmdb.org/t/p/original{{movie.poster_path}}">
+    <div class="movie-content">
+        <div class="top-rated-box-container">
 
+            <div class="top-rated-box" *ngFor="let movie of movies; let i = index" (click)="seeData(i)" routerLink="/play">
+                <img src="https://image.tmdb.org/t/p/original{{movie.poster_path}}">
+                <div class="content">
+                    <h3>{{movie.original_title}}</h3>
+                    <h4>Vote count: {{movie.vote_count}} - Vote Average: {{movie.vote_average}}</h4>
+                </div>
             </div>
-            <div class="content">
-                <i class="fa-solid fa-play"></i>
-                <h2>{{movie.original_title}}</h2>
-            </div>
-            
         </div>
     </div>
 </section>

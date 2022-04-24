@@ -1,11 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from 'src/app/services/api.service';
-
-interface movie{
-  original_title:string,
-  poster_path:string,
-}
-
+import { movie } from 'src/app/models/rated-movie';
+import { PlayService } from 'src/app/services/play.service';
+import { RatedMoviesService } from 'src/app/services/rated-movies.service';
 
 @Component({
   selector: 'app-movies',
@@ -14,16 +10,23 @@ interface movie{
 })
 export class MoviesComponent implements OnInit {
 
-  constructor(private apiService: ApiService) { }
+  movies:movie[] = [];
 
-  popular:movie[] = [];
+  
+
+  constructor(private http : RatedMoviesService, private playService: PlayService) { }
 
   ngOnInit(): void {
-    this.apiService.getPopularMovies().subscribe(data=>{
-      this.popular = data.results
-      console.log(this.popular)
+    this.http.getPopularMovies().subscribe(data=>{
+      this.movies = data.results
     }, err =>{
       console.log(err)
     })
   }
+
+  seeData(i : number){
+    this.playService.movieData = this.movies[i];
+    console.log(this.playService.movieData);
+  }
+  
 }

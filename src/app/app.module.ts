@@ -7,10 +7,10 @@ import { HttpClientModule } from '@angular/common/http'
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
-import { MoviesComponent } from './components/movies/movies.component';
-import { SeriesComponent } from './components/series/series.component';
-import { PlayComponent } from './components/play/play.component';
-import { SearchComponent } from './components/search/search.component';
+import { MoviesModule } from './components/movies/movies.module';
+import { FormsModule } from '@angular/forms';
+
+
 
 
 @NgModule({
@@ -18,15 +18,13 @@ import { SearchComponent } from './components/search/search.component';
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    MoviesComponent,
-    SeriesComponent,
-    PlayComponent,
-    SearchComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    MoviesModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
